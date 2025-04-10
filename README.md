@@ -1,54 +1,52 @@
-# React + TypeScript + Vite
+# Letter Sum Editor
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple, interactive web app that calculates the sum of letters in a given text. The app supports both **Arabic** and **French** languages, where each letter has a specific value.
 
-Currently, two official plugins are available:
+### Features:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Switchable Languages:** Toggle between Arabic and French for text input.
+- **Real-Time Letter Sum Calculation:** As you type, the app dynamically calculates the sum based on the selected language.
+- **Responsive Design:** Optimized for both mobile and desktop devices, offering a seamless experience.
+- **Supports Arabic Text Direction:** The app automatically switches to Right-to-Left (RTL) mode for Arabic text, and Left-to-Right (LTR) for French.
 
-## Expanding the ESLint configuration
+### Tech Stack:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **React**: JavaScript library for building the user interface.
+- **TypeScript**: Type-safe JavaScript for better development experience.
+- **Tailwind CSS**: Utility-first CSS framework for rapid UI development.
+- **shadcn/ui**: UI components library for a beautiful and accessible design.
+- **Vite**: Next-generation build tool for fast development.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+### Installation:
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+1. Clone the repository:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+   ```bash
+   git clone https://github.com/your-username/your-repo-name.git
+   ```
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+2. Navigate to the project directory:
+
+   ```bash
+   cd your-repo-name
+   ```
+
+3. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+4. Run the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+### Deployment:
+
+To deploy the app to GitHub Pages, simply run:
+
+```bash
+npm run deploy
 ```
