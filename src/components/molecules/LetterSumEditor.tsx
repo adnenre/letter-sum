@@ -37,6 +37,7 @@ const arabicValuesSun = {
 };
 const arabicValuesMoon = {
   ا: 13,
+  ى: 13,
   ب: 0,
   ج: 0,
   د: 0,
