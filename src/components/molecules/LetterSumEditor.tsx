@@ -7,6 +7,7 @@ import { FaSun, FaMoon } from "react-icons/fa";
 
 const arabicValuesSun = {
   ا: 1,
+  ى: 1,
   ب: 2,
   ج: 3,
   د: 4,
@@ -28,6 +29,7 @@ const arabicValuesSun = {
   ر: 200,
   ش: 300,
   ت: 400,
+  ة: 400,
   ث: 500,
   خ: 600,
   ذ: 700,
@@ -59,6 +61,7 @@ const arabicValuesMoon = {
   ر: 6,
   ش: 0,
   ت: 0,
+  ة: 0,
   ث: 0,
   خ: 0,
   ذ: 0,
