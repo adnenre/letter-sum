@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { FaSun, FaMoon } from "react-icons/fa";
 const ThemeSwitcher = () => {
   const [isDarkMode, setIsDarkMode] = useState(false); // For toggling dark mode
