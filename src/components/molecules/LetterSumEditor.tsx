@@ -1,5 +1,5 @@
 // src/components/LetterSumEditor.tsx
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { Textarea } from "@/components/ui/textarea";
 import { Switch } from "@/components/ui/switch";
 import { Label } from "@/components/ui/label";
@@ -53,6 +53,14 @@ const getArabicSum = (text: string) => {
 export default function LetterSumEditor() {
   const [text, setText] = useState("");
   const [isArabic, setIsArabic] = useState(false);
+  const inputRef = useRef<HTMLTextAreaElement>(null);
+  const handleLanguageSwitch = () => {
+    // Toggle language between Arabic and French
+    setIsArabic(!isArabic);
+
+    // Focus on the input after switching the language
+    inputRef.current?.focus();
+  };
 
   const sum = isArabic ? getArabicSum(text) : getFrenchSum(text);
 
@@ -64,12 +72,13 @@ export default function LetterSumEditor() {
           <Switch
             id="lang-switch"
             checked={isArabic}
-            onCheckedChange={setIsArabic}
+            onCheckedChange={handleLanguageSwitch}
           />
           <Label>{"Arabic"}</Label>
         </div>
         <Textarea
-          placeholder="Type your text here..."
+          ref={inputRef}
+          placeholder={isArabic ? "أدخل النص هنا" : "Enter text here"}
           value={text}
           onChange={(e) => setText(e.target.value)}
           className="min-h-[150px] w-full"
