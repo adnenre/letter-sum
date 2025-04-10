@@ -2,7 +2,7 @@
   "name": "letter-sum-editor",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://your-username.github.io/letter-sum-editor",
+  "homepage": "https://adnenre.github.io/letter-sum-editor",
   "type": "module",
   "scripts": {
     "dev": "vite",
