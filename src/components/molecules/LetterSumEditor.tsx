@@ -38,6 +38,7 @@ const arabicValuesSun = {
   غ: 1000,
 };
 const arabicValuesMoon = {
+  ء: 13,
   ا: 13,
   ى: 13,
   ب: 0,
