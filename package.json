@@ -1,8 +1,8 @@
 {
-  "name": "letter-sum-editor",
+  "name": "letter-sum",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://adnenre.github.io/letter-sum-editor",
+  "homepage": "https://adnenre.github.io/letter-sum",
   "type": "module",
   "scripts": {
     "dev": "vite",
